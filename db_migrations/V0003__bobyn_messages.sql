@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS bobyn_messages (
+  id SERIAL PRIMARY KEY,
+  channel_id INTEGER NOT NULL,
+  user_id INTEGER NOT NULL,
+  text TEXT NOT NULL,
+  created_at TIMESTAMP DEFAULT NOW()
+);

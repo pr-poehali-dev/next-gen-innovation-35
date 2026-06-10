@@ -1,0 +1,22 @@
+{
+  "tests": [
+    {
+      "name": "Register new bobyn",
+      "method": "POST",
+      "path": "/",
+      "body": {"action": "register", "username": "testbob", "email": "testbob@bob.ru", "password": "bobpassword123", "avatar": "🦉"},
+      "expectedStatus": 200,
+      "expectedBody": {"token": "string"},
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Login bobyn",
+      "method": "POST",
+      "path": "/",
+      "body": {"action": "login", "username": "testbob", "password": "bobpassword123"},
+      "expectedStatus": 200,
+      "expectedBody": {"token": "string"},
+      "bodyMatcher": "partial"
+    }
+  ]
+}
