@@ -1,0 +1,12 @@
+{
+  "tests": [
+    {
+      "name": "Get voice rooms",
+      "method": "GET",
+      "path": "/?action=rooms",
+      "expectedStatus": 200,
+      "expectedBody": {"rooms": {}},
+      "bodyMatcher": "partial"
+    }
+  ]
+}
